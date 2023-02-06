@@ -1,0 +1,181 @@
+_type: export
+__export_format: 4
+__export_date: 2023-02-06T06:28:26.048Z
+__export_source: insomnia.desktop.app:v2022.7.5
+resources:
+  - _id: req_fe9368e5cc9b4ad1ace4ea765bb57bfd
+    parentId: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    modified: 1675664893019
+    created: 1675664217359
+    url: "{{ _.URL }}/new"
+    name: new
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1675664217359
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    parentId: null
+    modified: 1675503394537
+    created: 1675503394537
+    name: adivina-palabra-server-simplified
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_95e34eb713eb4e25bcf91d9a7a2054c7
+    parentId: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    modified: 1675664788329
+    created: 1675503394559
+    url: "{{ _.URL }}/guess/14f33f2b-811e-421e-afa6-351ac50fc042"
+    name: guess
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"position": 0,
+        	"letter": "a"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1673079087495.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f2c5312b59dc44efb61982cbc1e28137
+    parentId: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    modified: 1675664821489
+    created: 1675664490209
+    url: "{{ _.URL }}/guess/whatever/peral"
+    name: guess with word
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"position": 1,
+        	"letter": "e"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1673079020243.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_53e07c627fbf411dae2b42d45d684dfa
+    parentId: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    modified: 1675588423641
+    created: 1675503394547
+    url: "{{ _.URL }}/check/peral"
+    name: check
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+      disabled: true
+    metaSortKey: -1673078818488
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_f5e802a5f1324f35817965ed0dcbfdc8
+    parentId: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    modified: 1675581470587
+    created: 1675503394538
+    name: Base Environment
+    data:
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzExLCJpYXQiOjE2NzMxMDk3MzMsImV4cCI6MTY3MzExMDMzM30.SenBkElQysJtA_Tsc5Oq3v1JitNLeo0urDRkXFpGw_I
+    dataPropertyOrder:
+      "&":
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1673027083890
+    _type: environment
+  - _id: jar_5f56f0e8cc5c421cab72ccde676c83b5
+    parentId: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    modified: 1675503394542
+    created: 1675503394542
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_3bc457147612494e8d8236150d4197b7
+    parentId: wrk_5116d3dd42784ff0916ad6a269e9a02f
+    modified: 1675503394568
+    created: 1675503394544
+    fileName: adivina-palabra-server-simplified
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_0a88038778094dcfb8baac561e54ef16
+    parentId: env_f5e802a5f1324f35817965ed0dcbfdc8
+    modified: 1675581440945
+    created: 1675581412813
+    name: local
+    data:
+      URL: http://localhost:8888
+    dataPropertyOrder:
+      "&":
+        - URL
+    color: null
+    isPrivate: false
+    metaSortKey: 1675581412813
+    _type: environment
+  - _id: env_5a813c0a967f4c7e8ef4709f6f263941
+    parentId: env_f5e802a5f1324f35817965ed0dcbfdc8
+    modified: 1675581502699
+    created: 1675581421250
+    name: fly.io
+    data:
+      URL: https://adivina-palabra.fly.dev
+    dataPropertyOrder:
+      "&":
+        - URL
+    color: null
+    isPrivate: false
+    metaSortKey: 1675581421250
+    _type: environment
